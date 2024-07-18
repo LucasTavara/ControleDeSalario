@@ -78,14 +78,16 @@ public class Worker {
     }
 
     //Análise de contrato.
-    public double income(Integer yeas, Integer month) {
+    public double income(int year, int month) {
         double sum = Salary;
         Calendar cal = Calendar.getInstance();
         for (HourContract c : contracts) {
-            cal.setTime(c.getDate());
+            cal.getTime();
             int c_year = cal.get(Calendar.YEAR);
             int c_month = 1+ cal.get(Calendar.MONTH);
-            if (yeas == c_year && month == c_month) {
+            //condicao
+            if (year == c_year && month == c_month) {
+
                 sum += c.totalValue();
             }
         }

@@ -8,6 +8,7 @@ import Entities.WorkerLevel;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Year;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
@@ -43,7 +44,7 @@ public class Program {
 
         for ( int i = 1; i<=n;i++){
             System.out.println("Enter contracts #" + i + " data ");
-            System.out.print("Date (DD/MM/YY): ");
+            System.out.print("Date (DD/MM/YYYY): ");
             Date contractDate =sdf.parse(sc.next());
             System.out.print("Value per hour: ");
             double valuehours= sc.nextDouble();
@@ -62,8 +63,7 @@ public class Program {
         int year = Integer.parseInt(monthAndYear.substring(3));
         System.out.println("Name: " + worker.getName());
         System.out.println("Department: " + worker.getDepartament().getName());
-        double income = worker.income(year, month);
-        System.out.printf("Income for %s/%d: %.2f%n", month, year, income);
+        System.out.println("Income for " + monthAndYear + " : " + String.format("%.2f",worker.income(month,year)));
         sc.close();
     }
 }

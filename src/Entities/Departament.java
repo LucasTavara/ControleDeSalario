@@ -3,8 +3,9 @@ package Entities;
 public class Departament {
     private String name;
 
-    public  Departament(String departamentName){
 
+    public Departament(String name) {
+        this.name = name;
     }
 
     public String getName() {
