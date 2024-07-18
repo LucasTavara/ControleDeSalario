@@ -3,7 +3,7 @@ package Entities;
 public class Departament {
     private String name;
 
-    public  Departament(){
+    public  Departament(String departamentName){
 
     }
 

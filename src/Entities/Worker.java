@@ -11,8 +11,9 @@ public class Worker {
         private Double Salary;
     private WorkerLevel Level;
 
-    private List<HourContract> contracts = new ArrayList<>();
     private Departament Departament;
+    private List<HourContract> contracts = new ArrayList<>();
+
 
     public Worker() {
     }
@@ -26,9 +27,42 @@ public class Worker {
         this.Departament = departament;
     }
 
-    // get and set of my contracts
+    // get and set
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        this.Name = name;
+    }
+
+    public Double getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.Salary = salary;
+    }
+
+    public WorkerLevel getLevel() {
+        return Level;
+    }
+
+    public void setLevel(WorkerLevel level) {
+        this.Level = level;
+    }
+
     public List<HourContract> getContracts() {
         return contracts;
+    }
+
+    public Entities.Departament getDepartament() {
+        return Departament;
+    }
+
+    public void setDepartament(Entities.Departament departament) {
+        this.Departament = departament;
     }
 
     public void setContracts(List<HourContract> contracts) {
