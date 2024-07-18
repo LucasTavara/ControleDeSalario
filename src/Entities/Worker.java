@@ -8,7 +8,7 @@ import java.util.jar.Attributes;
 
 public class Worker {
     private String Name;
-    private Double Salary;
+        private Double Salary;
     private WorkerLevel Level;
 
     private List<HourContract> contracts = new ArrayList<>();
@@ -19,9 +19,9 @@ public class Worker {
 
     // O contracts não vai estar dentro de um construtor pois ele recebe muitos valores,
     // então é importante seguir o padrão de inicializa-lo com zero. Isso serve para todos Exemplos.
-    public Worker(String name, Double salary, WorkerLevel level, Departament departament) {
+    public Worker(String name, Double Salary, WorkerLevel level, Departament departament) {
         this.Name = name;
-        this.Salary = salary;
+        this.Salary = Salary;
         this.Level = level;
         this.Departament = departament;
     }
